@@ -7,7 +7,7 @@
   <a href="https://gitee.com/ZihaoVistonWang/repairCN">中文版本</a> |
 </p>
 
-> repairCN is a small Stata utility for fixing Chinese text garbling in files exported by `outreg2`. It currently supports XML-based `.xls` / `.xml` files and `.rtf` files, and rewrites them in place.
+> repairCN is a small **Stata** utility for fixing Chinese text garbling in files exported by `outreg2`. It currently supports XML-based `.xls` / `.xml` files and `.rtf` files, and rewrites them in place.
 
 ## What it does
 
