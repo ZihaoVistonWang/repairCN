@@ -1,89 +1,74 @@
 {smcl}
 {* *! version 1.1.0 01apr2026}{...}
+{vieweralsosee "[R] outreg2" "help outreg2"}{...}
+{vieweralsosee "[M-0] Mata" "help mata"}{...}
+{viewerjumpto "Syntax" "repairCN##syntax"}{...}
+{viewerjumpto "Description" "repairCN##description"}{...}
+{viewerjumpto "Installation" "repairCN##installation"}{...}
+{viewerjumpto "Examples" "repairCN##examples"}{...}
+{viewerjumpto "Author" "repairCN##author"}{...}
 
 {title:Title}
 
-{p2colset 5 20 22 2}{...}
-{p2col:{hi:repairCN} {hline 2}}Fix encoding issues in {.xls} and {.rtf} files exported by {cmd:outreg2}{p_end}
+{p2colset 5 15 17 2}{...}
+{p2col:{hi:repairCN} {hline 2}}Fix Chinese encoding issues in {cmd:.xls} and {cmd:.rtf} files exported by {cmd:outreg2}{p_end}
 {p2colreset}{...}
 
 {marker syntax}{...}
 {title:Syntax}
 
-{p 8 12 2}
-{cmd:repairCN} {it:"path/to/filename.xls"} 
+{p 8 17 2}
+{cmd:repairCN} {it:"filename.xls"}
 
-{p 8 12 2}
-{cmd:repairCN} {it:"path/to/filename.rtf"}
+{p 8 17 2}
+{cmd:repairCN} {it:"filename.rtf"}
 
 {pstd}
-The file path must be enclosed in double quotes.
+{hi:Note:} The file path {it:must} be enclosed in double quotes if it contains spaces or special characters.
 
 {marker description}{...}
 {title:Description}
 
 {pstd}
-{cmd:repairCN} addresses Chinese text garbling in spreadsheet files produced by
-{cmd:outreg2}. For {.xls} files, it updates the internal XML header from
-{cmd:encoding="US-ASCII"} to {cmd:encoding="UTF-8"}. For {.rtf} files, it
-rewrites UTF-8 text into the {cmd:\u#?} escape form used by Microsoft Word.
+{cmd:repairCN} resolves the "mojibake" (garbled text) issue for Chinese characters in files produced by the {cmd:outreg2} command. 
 
 {pstd}
-For {.xls} files, the command uses {help filefilter}; for {.rtf} files, it uses
-Mata to decode the text and write the converted file back in place.
+For {cmd:.xls} files (which are actually XML-based), it changes the internal encoding declaration from {cmd:US-ASCII} to {cmd:UTF-8}.
 
 {pstd}
-Typical workflow:
-
-{phang2}1. Run {cmd:outreg2} to export results to an {.xls} file.
-{phang2}2. Run {cmd:repairCN} on that file.
-{phang2}3. Open the file in Excel/WPS; Chinese characters should display correctly.
+For {cmd:.rtf} files, it uses a native {help mata} engine to mathematically convert UTF-8 characters into the {cmd:\u#?} Unicode escape sequences required by Microsoft Word for proper display.
 
 {pstd}
-For RTF output, use the same command after {cmd:outreg2} writes the {.rtf} file.
+{hi:Workflow:}
+
+{phang2}1. Export your results using {cmd:outreg2, excel} or {cmd:outreg2, rtf}.{p_end}
+{phang2}2. Run {cmd:repairCN "your_file_name.xls/rtf"}.{p_end}
+{phang2}3. Open the file in Excel or Word; Chinese characters will now display correctly.{p_end}
 
 {marker installation}{...}
 {title:Installation}
 
 {pstd}
-For users in China (faster download):
-{phang2}{cmd:. net install repairCN, from("https://gitee.com/ZihaoVistonWang/repairCN/raw/main/") replace}
+For users in China (Gitee Mirror):{break}
+{stata `". net install repairCN, from(\"https://gitee.com/ZihaoVistonWang/repairCN/raw/main/\") replace"' }
 
 {pstd}
-For global users:
-{phang2}{cmd:. net install repairCN, from("https://raw.githubusercontent.com/ZihaoVistonWang/repairCN/main/") replace}
+For global users (GitHub):{break}
+{stata `". net install repairCN, from(\"https://raw.githubusercontent.com/ZihaoVistonWang/repairCN/main/\") replace"' }
 
 {marker examples}{...}
 {title:Examples}
 
-{phang}{cmd:. repairCN "result.xls"}
-{phang}{cmd:. repairCN "doc/final/result.xls"}
-{phang}{cmd:. repairCN "result.rtf"}
-{phang}{cmd:. repairCN "doc/final/result.rtf"}
-
-{marker results}{...}
-{title:Stored results}
-
-{pstd}
-{cmd:repairCN} does not return results in {cmd:r()}, {cmd:e()}, or {cmd:s()}.
-
-{title:Exit codes}
-
-{phang}{cmd:198} if file path is missing.
-{phang}{cmd:601} if file is not found.
-{phang}{cmd:198} if the file extension is not {.xls}, {.xml}, or {.rtf}.
+{phang}{cmd:. repairCN "result.xls"}{p_end}
+{phang}{cmd:. repairCN "doc/final/robustness.rtf"}{p_end}
 
 {marker author}{...}
 {title:Author}
 
 {pstd}
 Zihao Viston Wang{break}
-Personal website: {browse "https://zihaowang.cn":zihaowang.cn}{break}
+Website: {browse "https://zihaowang.cn"}{break}
 Email: {browse "mailto:hi@zihaowang.cn":hi@zihaowang.cn}
 
 {pstd}
-{browse "https://github.com/ZihaoVistonWang/repairCN":GitHub Repository}{break}
-{browse "https://gitee.com/ZihaoVistonWang/repairCN":Gitee Repository (镜像)}
-
-{pstd}
-repairCN package.
+{browse "https://github.com/ZihaoVistonWang/repairCN":GitHub Repository} | {browse "https://gitee.com/ZihaoVistonWang/repairCN":Gitee Mirror}
