@@ -9,23 +9,29 @@
 
 ![Example](example.png)
 
+> [!NOTE]
 > `repairCN` is a lightweight **Stata** command designed to fix Chinese character encoding issues in files exported by `outreg2`. It currently supports `.xls` / `.xml` (XML format) and `.rtf` files, and performs fixes directly on the original file.
 
+> [!CAUTION]
+> This tool is currently in an **experimental development** stage. If you encounter any bugs while using it, feel free to send feedback to [hi@zihaowang.cn](mailto:hi@zihaowang.cn)!
+
 ## Installation
+
+**All users** can install from GitHub:
+```stata
+net install repairCN, from("https://raw.githubusercontent.com/ZihaoVistonWang/repairCN/main/") replace
+```
 
 **Chinese users** are recommended to install from Gitee (faster):
 ```stata
 net install repairCN, from("https://gitee.com/ZihaoVistonWang/repairCN/raw/main/") replace
 ```
 
-**International users** can install from GitHub:
-```stata
-net install repairCN, from("https://raw.githubusercontent.com/ZihaoVistonWang/repairCN/main/") replace
-```
-
 ## Usage Example
 
-After your last `outreg2` output command, add the `repairCN` fix command.
+After your last `outreg2` output command, add the `repairCN` fix command. 
+
+*Of course, you can also use it independently to repair files that were previously generated*.
 
 ```stata
 **# xls example, rtf works the same way
