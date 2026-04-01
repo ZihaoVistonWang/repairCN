@@ -50,23 +50,23 @@ For {cmd:.rtf} files, it uses a native {help mata} engine to mathematically conv
 
 {pstd}
 For users in China (Gitee Mirror):{break}
-{stata `". net install repairCN, from(\"https://gitee.com/ZihaoVistonWang/repairCN/raw/main/\") replace"' }
+{stata `". net install repairCN, from("https://gitee.com/ZihaoVistonWang/repairCN/raw/main/") replace"' }
 
 {pstd}
 For global users (GitHub):{break}
-{stata `". net install repairCN, from(\"https://raw.githubusercontent.com/ZihaoVistonWang/repairCN/main/\") replace"' }
+{stata `". net install repairCN, from("https://raw.githubusercontent.com/ZihaoVistonWang/repairCN/main/") replace"' }
 
 {marker examples}{...}
 {title:Examples}
 
-{phang}{cmd:. repairCN "result.xls"}{p_end}
-{phang}{cmd:. repairCN "doc/final/robustness.rtf"}{p_end}
+{phang}{cmd:. repairCN "filename.xls"}{p_end}
+{phang}{cmd:. repairCN "path/to/filename.rtf"}{p_end}
 
 {marker author}{...}
 {title:Author}
 
 {pstd}
-Zihao Viston Wang{break}
+Zihao Viston Wang (王梓豪){break}
 Website: {browse "https://zihaowang.cn"}{break}
 Email: {browse "mailto:hi@zihaowang.cn":hi@zihaowang.cn}
 
