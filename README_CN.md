@@ -3,13 +3,13 @@
 </h1>
 
 <p align="center">
-   | <b>版本：</b> 1.1.0 | <b>作者：</b> <a href="https://zihaowang.cn">Zihao Viston Wang</a> | <b>语言：</b>
+   | <b>版本：</b> 1.1.0 | <b>作者：</b> <a href="https://zihaowang.cn">王梓豪</a> | <b>语言：</b>
   <a href="https://github.com/ZihaoVistonWang/repairCN">English</a> |
 </p>
 
 ![Example](example.png)
 
-> `repairCN` 是一款轻量级 **Stata** 命令，专门用于修复 `outreg2` 导出文件中的中文乱码问题。目前支持 `.xls` / `.xml`（XML 格式）和 `.rtf` 文件，直接在原文件基础上进行修复。
+> `repairCN` 是一款轻量级 **Stata** 命令，专门用于修复 `outreg2` 导出文件中的中文乱码问题。目前支持 `.xls` / `.xml` 和 `.rtf` 文件，直接在原文件基础上进行修复。
 
 ## 安装
 
