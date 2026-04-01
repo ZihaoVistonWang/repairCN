@@ -1,2 +1,6 @@
 .history
 .vscode
+*.do
+*.xls
+*.rtf
+*.txt
