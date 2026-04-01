@@ -42,6 +42,17 @@ Typical workflow:
 {pstd}
 For RTF output, use the same command after {cmd:outreg2} writes the {.rtf} file.
 
+{marker installation}{...}
+{title:Installation}
+
+{pstd}
+For users in China (faster download):
+{phang2}{cmd:. net install repairCN, from("https://gitee.com/ZihaoVistonWang/repairCN/raw/main/") replace}
+
+{pstd}
+For global users:
+{phang2}{cmd:. net install repairCN, from("https://raw.githubusercontent.com/ZihaoVistonWang/repairCN/main/") replace}
+
 {marker examples}{...}
 {title:Examples}
 
@@ -64,6 +75,15 @@ For RTF output, use the same command after {cmd:outreg2} writes the {.rtf} file.
 
 {marker author}{...}
 {title:Author}
+
+{pstd}
+Zihao Viston Wang{break}
+Personal website: {browse "https://zihaowang.cn":zihaowang.cn}{break}
+Email: {browse "mailto:hi@zihaowang.cn":hi@zihaowang.cn}
+
+{pstd}
+{browse "https://github.com/ZihaoVistonWang/repairCN":GitHub Repository}{break}
+{browse "https://gitee.com/ZihaoVistonWang/repairCN":Gitee Repository (镜像)}
 
 {pstd}
 repairCN package.
