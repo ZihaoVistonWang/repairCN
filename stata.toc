@@ -1,0 +1,2 @@
+v 1.0.0
+p repairCN Fixes outreg2 encoding issues.

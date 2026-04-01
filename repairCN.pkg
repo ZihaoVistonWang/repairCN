@@ -1,0 +1,5 @@
+v 1.0.0
+d repairCN. Fixes Chinese mojibake in outreg2 excel exports.
+d Distribution-Date: 20260401
+f repairCN.ado
+f repairCN.sthlp
