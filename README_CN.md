@@ -30,6 +30,8 @@ net install repairCN, from("https://raw.githubusercontent.com/ZihaoVistonWang/re
 ## 使用示例
 在你的最后一行`outreg2`结果输出命令后，添加`repairCN`修复命令。
 
+*当然你也可以单独用它来修复之前已经生成的文件。*
+
 ```stata
 **# xls示例，rtf同理
 // 你的回归1
