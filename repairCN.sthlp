@@ -1,12 +1,5 @@
 {smcl}
 {* *! version 1.0.0 01apr2026}{...}
-{vieweralsosee "help filefilter" "help filefilter"}
-{vieweralsosee "help outreg2" "help outreg2"}
-{viewerjumpto "Syntax" "repairCN##syntax"}
-{viewerjumpto "Description" "repairCN##description"}
-{viewerjumpto "Examples" "repairCN##examples"}
-{viewerjumpto "Stored results" "repairCN##results"}
-{viewerjumpto "Author" "repairCN##author"}
 
 {title:Title}
 
