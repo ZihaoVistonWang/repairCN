@@ -9,12 +9,6 @@
 
 > repairCN 是一款轻量级 **Stata** 命令，专门用于修复 `outreg2` 导出文件中的中文乱码问题。目前支持 `.xls` / `.xml`（XML 格式）和 `.rtf` 文件，直接在原文件基础上进行修复。
 
-## 功能特点
-
-- **针对 `.xls` 和 `.xml` 文件**：通过 `filefilter` 命令将 XML 头部的编码声明从 `encoding="US-ASCII"` 改为 `encoding="UTF-8"`
-- **针对 `.rtf` 文件**：使用 Mata 将 UTF-8 编码的中文转换为 Microsoft Word RTF 格式的 `\u#?` 转义序列
-- 转换完成后将直接覆盖原文件
-
 ## 安装
 
 **国内用户**推荐从 Gitee 安装（速度更快）：
@@ -28,19 +22,17 @@ net install repairCN, from("https://raw.githubusercontent.com/ZihaoVistonWang/re
 ```
 
 ## 使用示例
+在你的最后一行`outreg2`结果输出命令后，添加`repairCN`修复命令。
 
 ```stata
-repairCN "filename.xls"
-repairCN "path/to/filename.xls"
-repairCN "filename.rtf"
-repairCN "path/to/filename.rtf"
+**# xls示例，rtf同理
+// 你的回归1
+outreg2 using "path/to/filename.xls", replace
+...
+// 你的回归n
+outreg2 using "path/to/filename.xls", append
+repairCN "path/to/filename.xls"  //最后一行进行修复
 ```
-
-## 使用流程
-
-1. 使用 `outreg2` 导出回归结果
-2. 对输出文件执行 `repairCN` 修复
-3. 用 Excel、WPS 或 Word 打开文件，确认中文显示正常
 
 ## 注意事项
 
