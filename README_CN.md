@@ -9,26 +9,31 @@
 
 ![Example](example.png)
 
-> [!NOTE]
+> **ℹ️ 介绍**
+>
 > `repairCN` 是一款轻量级 **Stata** 命令，专门用于修复 `outreg2` 导出文件中的中文乱码问题。目前支持 `.xls` / `.xml` 和 `.rtf` 文件，直接在原文件基础上进行修复。
 
-> [!CAUTION]
+> **⚠️ 注意**
+>
 > 目前该工具仍处于**开发实验**阶段，若使用期间发现bug，欢迎及时发送邮件至[hi@zihaowang.cn](mailto:hi@zihaowang.cn)进行反馈！
 
 ## 安装
 
 **国内用户**推荐从 Gitee 安装（速度更快）：
+
 ```stata
 net install repairCN, from("https://gitee.com/ZihaoVistonWang/repairCN/raw/main/") replace
 ```
 
 **海外用户**可从 GitHub 安装：
+
 ```stata
 net install repairCN, from("https://raw.githubusercontent.com/ZihaoVistonWang/repairCN/main/") replace
 ```
 
 ## 使用示例
-在你的最后一行`outreg2`结果输出命令后，添加`repairCN`修复命令。
+
+在你的最后一行 `outreg2`结果输出命令后，添加 `repairCN`修复命令。
 
 *当然你也可以单独用它来修复之前已经生成的文件。*
 
