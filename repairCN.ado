@@ -1,12 +1,17 @@
-*! version 1.1.0  01apr2026
-*! Title: repairCN
-*! Description: Resolves Chinese character encoding issues (mojibake) 
-*!              in both .xls and .rtf files exported by the -outreg2- command.
-*! Mechanism:   For .xls, uses native -filefilter-.
-*!              For .rtf, extracts raw UTF-8 bytes via Mata and mathematically 
-*!              computes Unicode code points for MS Word RTF escapes (\uXXXX?).
-*! Syntax:      repairCN "path/to/filename.xls"
-*!              repairCN "path/to/filename.rtf"
+*! Title:         repairCN
+*! Version:       1.1.0
+*! Date:          01apr2026
+*! Description:   Resolves Chinese character encoding issues (mojibake) 
+*!                in both .xls and .rtf files exported by the -outreg2- command.
+*! Syntax:        repairCN "path/to/filename.xls"
+*!                repairCN "path/to/filename.rtf"
+*! Author:        Zihao Viston Wang
+*! Email:         hi@zihaowang.cn
+*! Homepage:      https://zihaowang.cn
+*! Repositories:  
+*!     - GitHub:  https://github.com/ZihaoVistonWang/repairCN
+*!     - Gitee:   https://gitee.com/ZihaoVistonWang/repairCN
+
 
 capture program drop repairCN
 program define repairCN
